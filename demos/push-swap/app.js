@@ -100,7 +100,8 @@ function updateStats(st) {
 const state = { caseData: null, args: null, index: 0 };
 
 function msPerOp() {
-    return parseInt($('speed').value, 10);
+    // slider: 🐢 = slow (left/min) … 🐇 = fast (right/max)
+    return 600 - parseInt($('speed').value, 10);
 }
 
 function showIndex(t) {
