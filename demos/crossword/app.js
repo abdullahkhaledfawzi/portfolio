@@ -88,6 +88,7 @@ function runRealTerminal(caseName) {
 
 document.addEventListener('DOMContentLoaded', () => {
     let current = 'basic';
+    let token = 0;
 
     renderGrid(PUZZLES.basic.puzzle);
     renderWords(PUZZLES.basic);
