@@ -1,0 +1,224 @@
+/* ============================================================
+   clonernews styles — one card style for all post types,
+   type badges, inline comments, live banner and toasts.
+   ============================================================ */
+
+:root {
+  --orange: #ff6600;
+  --orange-soft: #ffd9ad;
+  --bg: #f6f6ef;      /* the classic HN beige */
+  --card: #ffffff;
+  --text: #1a1a1a;
+  --muted: #737373;
+  --border: #e5e5d8;
+  --radius: 10px;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+button { font-family: inherit; }
+
+/* ---------- Top bar and tabs ---------- */
+
+.topbar {
+  background: var(--orange);
+  color: #fff;
+  padding: 14px 16px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo { font-size: 1.2rem; margin: 0; }
+
+.tabs { display: flex; gap: 8px; flex-wrap: wrap; }
+
+.tab {
+  border: none;
+  border-radius: 999px;
+  padding: 6px 14px;
+  background: rgba(255, 255, 255, 0.25);
+  color: #fff;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.tab.active { background: #fff; color: var(--orange); font-weight: 700; }
+
+/* ---------- Live Data banner ---------- */
+
+.live {
+  max-width: 720px;
+  margin: 12px auto 0;
+  padding: 10px 14px;
+  background: #fff8ee;
+  border: 1px solid var(--orange-soft);
+  border-radius: var(--radius);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  font-size: 0.9rem;
+}
+
+#live-info { flex: 1; }
+
+#live-button {
+  border: none;
+  border-radius: 999px;
+  padding: 6px 12px;
+  background: var(--orange);
+  color: #fff;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+/* ---------- Post cards ---------- */
+
+.container { max-width: 720px; margin: 0 auto; padding: 8px 16px 40px; }
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 14px 16px;
+  margin: 12px 0;
+}
+
+/* Cards merged live on top of the feed get a highlight */
+.card.is-new { border-color: var(--orange); box-shadow: 0 0 0 2px var(--orange-soft); }
+
+.badge {
+  display: inline-block;
+  padding: 2px 10px;
+  border-radius: 999px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.badge-story { background: var(--orange); }
+.badge-job { background: #2e8b57; }
+.badge-poll { background: #7b5cd6; }
+
+.post-title {
+  display: inline-block;
+  margin: 6px 0;
+  font-size: 1.05rem;
+  color: var(--text);
+  text-decoration: none;
+}
+
+a.post-title:hover { color: var(--orange); text-decoration: underline; }
+
+.meta { margin: 2px 0 6px; color: var(--muted); font-size: 0.85rem; }
+
+.post-text { margin: 6px 0; font-size: 0.92rem; white-space: pre-line; }
+
+.poll-options { margin: 8px 0 0; padding-left: 18px; font-size: 0.9rem; }
+.poll-options li { margin: 3px 0; }
+
+/* ---------- Comments (inline in the card) ---------- */
+
+.comments-toggle {
+  margin-top: 4px;
+  border: none;
+  border-radius: 999px;
+  padding: 5px 12px;
+  background: #f0f0e8;
+  font-size: 0.82rem;
+  cursor: pointer;
+}
+
+.comments-toggle:hover { background: #e6e6da; }
+
+.comments { margin-top: 10px; border-top: 1px solid var(--border); }
+
+.comment { margin-top: 10px; padding-left: 10px; border-left: 2px solid var(--border); }
+
+.comment-head {
+  margin: 0;
+  font-size: 0.78rem;
+  color: var(--muted);
+  cursor: pointer;
+  user-select: none;
+}
+
+.comment-head:hover { color: var(--orange); }
+
+.comment-body { margin: 4px 0 0; font-size: 0.88rem; white-space: pre-line; }
+
+/* ---------- Status line (loading / error / empty / end) ---------- */
+
+.status {
+  min-height: 24px;
+  margin: 8px 0;
+  text-align: center;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.status.error { color: #c0392b; font-weight: 700; }
+
+/* ---------- Load more button + toasts ---------- */
+
+.load-more {
+  display: block;
+  margin: 16px auto;
+  padding: 10px 26px;
+  border: none;
+  border-radius: 999px;
+  background: var(--orange);
+  color: #fff;
+  font-size: 0.95rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.load-more:hover { background: #e65c00; }
+.load-more:disabled { opacity: 0.5; cursor: wait; }
+
+.toasts {
+  position: fixed;
+  bottom: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  z-index: 10;
+}
+
+.toast {
+  background: #1a1a1a;
+  color: #fff;
+  padding: 10px 18px;
+  border-radius: 999px;
+  font-size: 0.88rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  animation: pop 0.25s ease;
+}
+
+@keyframes pop {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.hidden { display: none !important; }
+
+/* ---------- Small screens ---------- */
+
+@media (max-width: 480px) {
+  .topbar { flex-direction: column; align-items: flex-start; }
+}

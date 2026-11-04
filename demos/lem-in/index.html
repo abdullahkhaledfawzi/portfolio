@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🐜 lem-in — Solution Visualizer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>🐜 lem-in <span class="dim">visualizer</span></h1>
+        <div id="stats" class="chips">
+            <span class="chip">🐜 <b id="stat-ants">–</b> ants</span>
+            <span class="chip">🏛 <b id="stat-rooms">–</b> rooms</span>
+            <span class="chip">🔗 <b id="stat-tunnels">–</b> tunnels</span>
+            <span class="chip">🔄 <b id="stat-turns">–</b> turns</span>
+            <span class="chip">🏁 <b id="stat-end">–</b> arrived</span>
+        </div>
+    </header>
+
+    <main>
+        <div id="board">
+            <svg id="svg" viewBox="0 0 1000 620" preserveAspectRatio="xMidYMid meet"></svg>
+        </div>
+
+        <div id="controls">
+            <button id="btn-reset" title="Back to turn 0">⟲</button>
+            <button id="btn-prev" title="Previous turn">⏮</button>
+            <button id="btn-play" title="Auto play / pause">▶</button>
+            <button id="btn-next" title="Next turn">⏭</button>
+            <div id="turn-label">turn <b id="turn-now">0</b> / <b id="turn-total">0</b></div>
+            <label id="speed-box" title="Seconds per turn">
+                🐢 <input type="range" id="speed" min="200" max="2000" step="100" value="800" /> 🐇
+            </label>
+            <select id="map-select" title="Choose a test map"></select>
+        </div>
+
+        <div id="log">
+            <h2 id="log-title">Turn 0</h2>
+            <p id="log-moves" class="dim">Press ▶ or ⏭ to start the simulation.</p>
+            <p id="log-arrived">🏁 arrived: <b id="arrived">0</b> / <b id="arrived-total">0</b></p>
+        </div>
+    </main>
+
+    <script src="solutions.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

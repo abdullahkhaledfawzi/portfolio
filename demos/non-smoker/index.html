@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmokeFree - Abdullah's Journey</title>
+    <meta name="description" content="Abdullah Khaled Fawzi's journey to a smoke-free life using the Allen Carr method.">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="bg-animation">
+        <div class="blob"></div>
+        <div class="blob"></div>
+    </div>
+
+    <header>
+        <div class="user-info">
+            <h1>Abdullah Khaled Fawzi</h1>
+            <p id="subtitle">Freedom Journey started: August 8, 2026 at 12:00 AM (Egypt Time)</p>
+        </div>
+        <div class="controls">
+            <button id="lang-toggle" onclick="toggleLang()">🌐 العربية</button>
+            <button id="theme-toggle" onclick="toggleTheme()">☀️ Light Mode</button>
+        </div>
+    </header>
+
+    <main>
+        <div class="dead-cigarette-wrapper">
+            <div class="dead-cigarette">
+                <div class="cig-filter"></div>
+                <div class="cig-paper">
+                    <div class="cig-crush"></div>
+                </div>
+                <div class="cig-ash"></div>
+                <div class="cig-smoke"></div>
+            </div>
+            <p class="dead-label" id="dead-label">The enemy is dead</p>
+        </div>
+
+        <section class="timer-container">
+            <h2 class="timer-title" id="timer-title">Time Until Freedom</h2>
+            <div class="time-display">
+                <div class="time-unit">
+                    <span class="time-value" id="val-days">00</span>
+                    <span class="time-label" id="label-days">Days</span>
+                </div>
+                <div class="time-unit">
+                    <span class="time-value">:</span>
+                    <span class="time-label">&nbsp;</span>
+                </div>
+                <div class="time-unit">
+                    <span class="time-value" id="val-hours">00</span>
+                    <span class="time-label" id="label-hours">Hours</span>
+                </div>
+                <div class="time-unit">
+                    <span class="time-value">:</span>
+                    <span class="time-label">&nbsp;</span>
+                </div>
+                <div class="time-unit">
+                    <span class="time-value" id="val-minutes">00</span>
+                    <span class="time-label" id="label-minutes">Minutes</span>
+                </div>
+                <div class="time-unit">
+                    <span class="time-value">:</span>
+                    <span class="time-label">&nbsp;</span>
+                </div>
+                <div class="time-unit">
+                    <span class="time-value" id="val-seconds">00</span>
+                    <span class="time-label" id="label-seconds">Seconds</span>
+                </div>
+            </div>
+            <div class="timer-status" id="timer-status">
+                Getting Ready for the Best Decision of Your Life!
+            </div>
+        </section>
+
+        <section class="emergency-section">
+            <button class="btn-emergency" id="btn-emergency">🚨 EMERGENCY / URGE 🚨</button>
+        </section>
+
+        <section class="wisdom-section">
+            <h2 class="wisdom-title" id="wisdom-title">Allen Carr's Wisdom</h2>
+            <div class="wisdom-grid">
+                <div class="wisdom-card">
+                    <h3 id="card-1-title">Not a Habit, an Addiction</h3>
+                    <p id="card-1-text">Smoking is not a habit you chose...</p>
+                </div>
+                <div class="wisdom-card">
+                    <h3 id="card-2-title">The Tight Shoes</h3>
+                    <p id="card-2-text">Smokers smoke to feel how non-smokers feel...</p>
+                </div>
+                <div class="wisdom-card">
+                    <h3 id="card-3-title">No Sacrifices</h3>
+                    <p id="card-3-text">You are giving up absolutely nothing...</p>
+                </div>
+                <div class="wisdom-card">
+                    <h3 id="card-4-title">Vaping & Shisha</h3>
+                    <p id="card-4-text">Vaping, e-cigarettes, and shisha are exactly the same...</p>
+                </div>
+                <div class="wisdom-card">
+                    <h3 id="card-5-title">The Illusion of Support</h3>
+                    <p id="card-5-text">A cigarette doesn't give you courage...</p>
+                </div>
+                <div class="wisdom-card">
+                    <h3 id="card-6-title">Enjoy Being Free</h3>
+                    <p id="card-6-text">Don't mourn the loss of cigarettes. Rejoice!...</p>
+                </div>
+                <div class="wisdom-card">
+                    <h3 id="card-7-title">Pity the Smokers</h3>
+                    <p id="card-7-text">You don't have to stay away from your smoking friends...</p>
+                </div>
+                <div class="wisdom-card">
+                    <h3 id="card-8-title">The Real Enemy</h3>
+                    <p id="card-8-text">Remember the real enemy. Don't miss smoking...</p>
+                </div>
+                <div class="wisdom-card">
+                    <h3 id="card-9-title">Real Stress Relief</h3>
+                    <p id="card-9-text">In times of stress...</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p id="footer-text">Created by Abdullah Khaled from Egypt with <span class="heart">❤️</span></p>
+    </footer>
+
+    <!-- Emergency Modal -->
+    <div class="emergency-modal" id="emergency-modal">
+        <div class="modal-content">
+            <button class="close-modal">&times;</button>
+            <h2 id="modal-title" style="display:flex;align-items:center;gap:10px;"><span class="extinguished-icon">🚬🚫</span> Wait! Read This First!</h2>
+            <div id="modal-body">
+                <!-- Injected via JS -->
+            </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

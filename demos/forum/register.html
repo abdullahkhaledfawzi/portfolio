@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register — Forum</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="auth-page">
+  <main class="auth-card card">
+    <a href="index.html" class="logo">💬 <span>Forum</span></a>
+    <h1>Create your account</h1>
+    <form id="register-form">
+      <label for="email">Email</label>
+      <input id="email" name="email" type="email" placeholder="you@example.com" required>
+      <label for="username">Username</label>
+      <input id="username" name="username" type="text" placeholder="nickname" maxlength="30" required>
+      <label for="password">Password</label>
+      <input id="password" name="password" type="password" placeholder="At least 6 characters" minlength="6" required>
+      <span class="form-error" id="form-error"></span>
+      <button type="submit" class="btn primary wide">Register</button>
+    </form>
+    <p class="auth-switch">Already a member? <a href="login.html">Log in</a></p>
+  </main>
+  <script src="auth-demo.js"></script>
+</body>
+</html>

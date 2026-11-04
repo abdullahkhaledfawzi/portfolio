@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Abdullah Khaled Fawzi — Backend &amp; Full-Stack Web Developer (Go · Node.js)</title>
+  <meta name="description" content="Portfolio of Abdullah Khaled Fawzi — backend-focused, full-stack range. Go HTTP servers, Node.js systems, REST APIs, Docker, Linux and concurrency, with live runnable demos of every project.">
+  <meta property="og:title" content="Abdullah Khaled Fawzi — Backend &amp; Full-Stack Web Developer">
+  <meta property="og:description" content="Go · Node.js · Docker · Linux — 10 open-source projects with live, playable demos. HTTP servers, forums, REST APIs, concurrency and algorithms.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://abdullahkhaledfawzi.github.io/portfolio/">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23141110'/%3E%3Ctext x='32' y='42' font-family='Segoe UI,system-ui,sans-serif' font-size='30' font-weight='700' fill='%23e8a24c' text-anchor='middle'%3EAK.%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip-link" href="#projects">Skip to projects</a>
+
+  <nav class="navbar" id="navbar">
+    <div class="container nav-inner">
+      <a href="#top" class="logo">AK<span class="logo-dot">.</span></a>
+      <div class="nav-links">
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <a class="btn btn-primary btn-nav" href="assets/cv/Abdullah-Khaled-Fawzi-CV.pdf" download="Abdullah-Khaled-Fawzi-CV.pdf" aria-label="Download CV as PDF">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        Download CV
+      </a>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Open menu" aria-expanded="false">☰</button>
+    </div>
+  </nav>
+
+  <header class="hero" id="top">
+    <div class="container hero-inner">
+      <div class="hero-text">
+        <p class="hero-hello">Hello, I'm</p>
+        <h1>Abdullah Khaled&nbsp;Fawzi</h1>
+        <p class="hero-role">Backend &amp; Full-Stack Web Developer</p>
+        <p class="hero-desc">I build HTTP&nbsp;servers, REST&nbsp;API integrations, CLI&nbsp;tools and containerised services in <strong>Go</strong> and <strong>Node.js</strong> — 15+ shipped projects, public on GitHub, mostly with <strong>zero dependencies</strong> by design. Based in Cairo, Egypt.</p>
+        <div class="hero-chips" aria-label="Core stack">
+          <span class="chip">Go</span>
+          <span class="chip">Node.js</span>
+          <span class="chip">Docker</span>
+          <span class="chip">Linux</span>
+          <span class="chip">Git / GitHub</span>
+          <span class="chip">Concurrency</span>
+          <span class="chip">REST APIs</span>
+        </div>
+        <div class="hero-actions">
+          <a class="btn btn-primary btn-lg" href="#projects">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+            View the projects
+          </a>
+          <a class="btn btn-lg" href="assets/cv/Abdullah-Khaled-Fawzi-CV.pdf" download="Abdullah-Khaled-Fawzi-CV.pdf">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            Download CV
+          </a>
+          <a class="btn btn-lg btn-ghost" href="https://github.com/abdullahkhaledfawzi" target="_blank" rel="noopener">GitHub</a>
+          <a class="btn btn-lg btn-ghost" href="https://www.linkedin.com/in/abdullah-khaled-fawzi" target="_blank" rel="noopener">LinkedIn</a>
+        </div>
+      </div>
+      <div class="hero-terminal" aria-hidden="true">
+        <div class="term-bar">
+          <span class="dot r"></span><span class="dot y"></span><span class="dot g"></span>
+          <span class="term-title">abdullah@linux ~/</span>
+        </div>
+        <pre class="term-body" id="hero-term"></pre>
+      </div>
+    </div>
+    <div class="hero-marquee" aria-hidden="true">
+      <div class="marquee-track" id="marquee"></div>
+    </div>
+  </header>
+
+  <section class="stats" aria-label="Quick facts">
+    <div class="container stats-grid">
+      <div class="stat"><span class="stat-num" data-count="15">0</span><span class="stat-plus">+</span><p>projects shipped — all public &amp; MIT-licensed on GitHub</p></div>
+      <div class="stat"><span class="stat-num" data-count="10">0</span><p>featured here — every one with a <strong>playable live demo</strong></p></div>
+      <div class="stat"><span class="stat-num" data-count="0">0</span><p>runtime dependencies — stdlib / vanilla across most repos</p></div>
+      <div class="stat"><span class="stat-num" data-count="3">0</span><p>containerised services built with Docker</p></div>
+    </div>
+  </section>
+
+  <section id="projects" class="section">
+    <div class="container">
+      <div class="section-head">
+        <h2>Every project, actually running<span class="tx">_</span></h2>
+        <p class="section-sub"> No slideware: web apps run live (real or snapshot data), CLI tools and algorithms are simulated in runnable demos built from the real programs’ outputs. <strong>Press ▶ inside any card.</strong></p>
+      </div>
+      <div class="filter-bar" id="filter-bar" role="tablist" aria-label="Filter projects">
+        <button class="filter-btn active" data-filter="all">All <span class="count">9</span></button>
+        <button class="filter-btn" data-filter="go">Go <span class="count">5</span></button>
+        <button class="filter-btn" data-filter="js">JavaScript <span class="count">4</span></button>
+        <button class="filter-btn" data-filter="docker">Docker <span class="count">3</span></button>
+        <button class="filter-btn" data-filter="server">Servers &amp; APIs <span class="count">4</span></button>
+      </div>
+      <div class="project-grid" id="project-grid"></div>
+      <p class="projects-note">Source code, READMEs, tests and Dockerfiles for every project in the featured list:
+        <a href="https://github.com/abdullahkhaledfawzi?tab=repositories" target="_blank" rel="noopener">github.com/abdullahkhaledfawzi →</a>
+      </p>
+    </div>
+  </section>
+
+  <section id="skills" class="section section-alt">
+    <div class="container">
+      <div class="section-head">
+        <h2>Technical skills</h2>
+        <p class="section-sub">Straight from the CV — the stack I use every day.</p>
+      </div>
+      <div class="skills-grid">
+        <div class="skill-card">
+          <h3><span class="skill-ico">⌨</span> Languages</h3>
+          <ul><li><b>Go</b> — primary language: HTTP servers, goroutines, stdlib everything</li><li><b>JavaScript / Node.js</b> — built-in modules, no npm needed</li><li><b>HTML / CSS</b> — responsive, hand-written UIs</li><li>Python &amp; SQL — basics</li></ul>
+        </div>
+        <div class="skill-card">
+          <h3><span class="skill-ico">⚙</span> Backend</h3>
+          <ul><li><b>REST APIs</b> &amp; HTTP servers (routing, middleware, status codes)</li><li><b>Microservices</b> structure &amp; clean handlers</li><li><b>JSON</b> modelling, encoding &amp; decoding</li><li><b>Concurrency</b> — goroutines, channels, mutexes</li></ul>
+        </div>
+        <div class="skill-card">
+          <h3><span class="skill-ico">🖥</span> Frontend</h3>
+          <ul><li><b>Responsive UI design</b> — themes from scratch, no frameworks</li><li><b>Server-side rendering</b> with Go templates</li><li><b>Dynamic search</b> &amp; filtering, debounced &amp; async</li></ul>
+        </div>
+        <div class="skill-card">
+          <h3><span class="skill-ico">🐳</span> DevOps &amp; tools</h3>
+          <ul><li><b>Docker</b> — multi-stage builds, one-command deploys</li><li><b>Linux</b> daily driver — CLI, shell scripting</li><li><b>Git / GitHub</b> — history, branches, code review</li></ul>
+        </div>
+        <div class="skill-card">
+          <h3><span class="skill-ico">🧠</span> Core engineering</h3>
+          <ul><li><b>Algorithms &amp; data structures</b> — max-flow, backtracking, greedy</li><li><b>Test-driven development</b> — Go unit tests, node:test suites</li><li><b>Problem solving</b> under constraint (42-style syllabus)</li></ul>
+        </div>
+        <div class="skill-card">
+          <h3><span class="skill-ico">🗣</span> Soft skills</h3>
+          <ul><li><b>Clear communication</b> — 2 years of customer-facing support</li><li><b>Active listening</b> &amp; requirements-first thinking</li><li><b>Structured debugging</b> under pressure</li></ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="section">
+    <div class="container">
+      <div class="section-head">
+        <h2>About me</h2>
+        <p class="section-sub">Backend-focused developer with a full-stack range and a strong eye for frontend design.</p>
+      </div>
+      <div class="about-grid">
+        <div class="about-text">
+          <p>I build HTTP servers, REST API integrations, CLI tools and containerised services in <strong>Go</strong> and <strong>Node.js</strong> — and I care about the boring parts: correct status codes, sessions that expire, passwords that are <em>hashed with scrypt</em>, and tests that actually run.</p>
+          <p>I studied at <strong>01 Coding · 01 Talent Academy (NextEra Education) — 2025 → now</strong>, a project-based software engineering program built on peer-to-peer learning and heavy code review; before that, a <strong>B.Sc. in Civil Engineering (Tanta University, 2018–2022)</strong> with a graduation project rated <em>Excellent</em> — which is where the analytical modelling habit comes from.</p>
+          <p>Two years in <strong>technical customer support for US &amp; UK customers</strong> (2023–2025) taught me to listen closely, communicate clearly and solve problems under pressure — skills I now use for debugging, teamwork and understanding what users actually need.</p>
+          <p><strong>Open to full-time and part-time roles</strong> — backend, full-stack, or platform engineering.</p>
+        </div>
+        <div class="about-side">
+          <div class="timeline">
+            <div class="tl-item">
+              <span class="tl-dot"></span>
+              <div>
+                <p class="tl-when">Now</p>
+                <p class="tl-what">Studying software engineering @ 01 Talent Academy — shipping Go &amp; Node.js projects weekly</p>
+              </div>
+            </div>
+            <div class="tl-item">
+              <span class="tl-dot"></span>
+              <div>
+                <p class="tl-when">2025</p>
+                <p class="tl-what">Joined 01 Coding · 01 Talent Academy (peer-driven engineering program)</p>
+              </div>
+            </div>
+            <div class="tl-item">
+              <span class="tl-dot"></span>
+              <div>
+                <p class="tl-when">2023 – 2025</p>
+                <p class="tl-what">Technical Customer Service Representative — US &amp; UK customers, Cairo</p>
+              </div>
+            </div>
+            <div class="tl-item">
+              <span class="tl-dot"></span>
+              <div>
+                <p class="tl-when">2018 – 2022</p>
+                <p class="tl-what">B.Sc. Civil Engineering, Tanta University — graduation project rated Excellent</p>
+              </div>
+            </div>
+          </div>
+          <div class="lang-badges">
+            <span class="chip chip-solid">Arabic — native</span>
+            <span class="chip chip-solid">English — C1</span>
+          </div>
+          <a class="btn btn-lg btn-block" href="assets/cv/Abdullah-Khaled-Fawzi-CV.pdf" download="Abdullah-Khaled-Fawzi-CV.pdf">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            Download the CV (PDF)
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="section section-alt">
+    <div class="container">
+      <div class="section-head">
+        <h2>Let's talk</h2>
+        <p class="section-sub">Open to full-time &amp; part-time roles — the fastest way is a email with the word “role”.</p>
+      </div>
+      <div class="contact-grid">
+        <a class="contact-item" href="mailto:Abdullahkhaledfawzi@gmail.com">
+          <span class="ci-ico">✉</span>
+          <span class="ci-main">Email</span>
+          <span class="ci-sub">Abdullahkhaledfawzi@gmail.com</span>
+        </a>
+        <a class="contact-item" href="https://github.com/abdullahkhaledfawzi" target="_blank" rel="noopener">
+          <span class="ci-ico"> GH</span>
+          <span class="ci-main">GitHub</span>
+          <span class="ci-sub">github.com/abdullahkhaledfawzi</span>
+        </a>
+        <a class="contact-item" href="https://www.linkedin.com/in/abdullah-khaled-fawzi" target="_blank" rel="noopener">
+          <span class="ci-ico">in</span>
+          <span class="ci-main">LinkedIn</span>
+          <span class="ci-sub">/in/abdullah-khaled-fawzi</span>
+        </a>
+        <a class="contact-item" href="tel:+201068273380">
+          <span class="ci-ico">☎</span>
+          <span class="ci-main">Phone</span>
+          <span class="ci-sub">+20 106 827 3380</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p><strong>Abdullah Khaled Fawzi</strong> — portfolio hand-built in vanilla HTML/CSS/JS, warm-dark theme (zero blue, high contrast), one page, zero frameworks.</p>
+      <p>© <span id="year"></span> · Cairo, Egypt · <a href="https://github.com/abdullahkhaledfawzi/portfolio" target="_blank" rel="noopener">source of this site</a></p>
+    </div>
+  </footer>
+
+  <!-- Demo modal -->
+  <div class="modal" id="demo-modal" aria-hidden="true" role="dialog" aria-label="Live project demo">
+    <div class="modal-backdrop" data-close></div>
+    <div class="modal-shell">
+      <div class="modal-bar">
+        <span class="modal-title" id="modal-title">demo</span>
+        <div class="modal-actions">
+          <a class="btn btn-sm" href="#" id="modal-open" target="_blank" rel="noopener">Open in new tab ↗</a>
+          <button class="btn btn-sm" data-close aria-label="Close demo">✕ Close</button>
+        </div>
+      </div>
+      <iframe id="modal-frame" title="Project demo" allow="fullscreen"></iframe>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

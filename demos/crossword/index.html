@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>crosswordSolver — Backtracking Visualizer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="top">
+        <h1>🧩 crosswordSolver <span class="dim">visualizer</span></h1>
+        <div class="chips">
+            <span class="chip">🧪 <b>12/12</b> tests passing</span>
+            <span class="chip">🧠 backtracking</span>
+        </div>
+    </header>
+
+    <main>
+        <div id="preset-bar">
+            <span class="dim">Solve:</span>
+            <button class="preset-btn active" data-case="basic">basic 4×4</button>
+            <button class="preset-btn" data-case="grocery">grocery 11×11</button>
+            <button class="preset-btn" data-case="beach">beach 13×15</button>
+        </div>
+
+        <div id="stage">
+            <div id="grid-wrap">
+                <div id="word-list" class="dim"></div>
+                <div id="grid"></div>
+                <p id="status"></p>
+            </div>
+            <div id="side">
+                <h2>terminal</h2>
+                <pre id="term">click a puzzle →</pre>
+            </div>
+        </div>
+
+        <div id="controls">
+            <button id="btn-play">▶ solve (animated)</button>
+            <button id="btn-skip">⏭ skip to result</button>
+            <button id="btn-reset">⟲ reset</button>
+            <button id="btn-real">▶ run the real solver</button>
+        </div>
+    </main>
+
+    <script src="solver.js"></script>
+    <script src="cases.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

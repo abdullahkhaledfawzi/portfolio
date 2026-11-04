@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>push-swap — Stack Sorter Visualizer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="top">
+        <h1>🔄 push-swap <span class="dim">visualizer</span></h1>
+        <div id="stats" class="chips">
+            <span class="chip">⚡ <b id="stat-ops">0</b> ops</span>
+            <span class="chip">🧮 <b id="stat-n">–</b> numbers</span>
+            <span class="chip">✅ <b id="stat-sorted">no</b> sorted</span>
+        </div>
+    </header>
+
+    <main>
+        <div id="preset-bar">
+            <span class="dim">Checker-verified cases (real binary output):</span>
+            <span id="preset-btns"></span>
+        </div>
+
+        <div id="stacks">
+            <div class="stack-col">
+                <h2 class="stack-title">stack <b>a</b></h2>
+                <div id="stack-a" class="stack"></div>
+            </div>
+            <div class="ops-col" id="op-log-pane">
+                <h2 class="stack-title">instructions</h2>
+                <div id="op-log"></div>
+            </div>
+            <div class="stack-col">
+                <h2 class="stack-title">stack <b>b</b></h2>
+                <div id="stack-b" class="stack empty"></div>
+            </div>
+        </div>
+
+        <div id="controls">
+            <button id="btn-play">▶ auto-sort (real ops)</button>
+            <button id="btn-step">⏭ step</button>
+            <button id="btn-prev">⏮ back</button>
+            <button id="btn-reset">⟲ reset</button>
+            <label id="speed-box" title="ms per op">
+                🐢 <input type="range" id="speed" min="40" max="500" step="30" value="220"> 🐇
+            </label>
+        </div>
+
+        <p id="verdict">Load a case, then press auto-sort or step through the exact instruction sequence produced by the push-swap binary. Stacks animate; the checker validates the final state.</p>
+    </main>
+
+    <script src="solutions.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

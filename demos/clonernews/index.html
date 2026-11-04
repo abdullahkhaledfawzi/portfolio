@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>clonernews — a tiny Hacker News reader</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Top bar: app name + the feed tabs -->
+  <header class="topbar">
+    <h1 class="logo">🍊 clonernews</h1>
+    <nav class="tabs">
+      <button class="tab active" data-feed="top">Top</button>
+      <button class="tab" data-feed="new">New</button>
+      <button class="tab" data-feed="best">Best</button>
+      <button class="tab" data-feed="job">Jobs</button>
+    </nav>
+  </header>
+
+  <!-- Live Data section: shows the newest item and a badge with
+       the number of unseen items. The button merges them on top. -->
+  <section class="live" id="live-panel">
+    <span id="live-info">👀 Watching Hacker News for new items…</span>
+    <button id="live-button" class="hidden">
+      🔔 <span id="live-count">0</span> new — show them
+    </button>
+  </section>
+
+  <!-- The post feed + its status line (loading / error / empty) -->
+  <main class="container">
+    <p id="status" class="status" role="status"></p>
+    <div id="feed"></div>
+    <button id="load-more" class="load-more hidden">Load more</button>
+  </main>
+
+  <!-- Toast notifications (bottom of the screen) -->
+  <div class="toasts" id="toasts"></div>
+
+  <!-- Our JS modules, loaded in dependency order:
+       utils -> api -> render -> comments -> feed -> live -> main -->
+  <script src="js/utils.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/render.js"></script>
+  <script src="js/comments.js"></script>
+  <script src="js/feed.js"></script>
+  <script src="js/live.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

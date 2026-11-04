@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Log in — Forum</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="auth-page">
+  <main class="auth-card card">
+    <a href="index.html" class="logo">💬 <span>Forum</span></a>
+    <h1>Welcome back</h1>
+    <form id="login-form">
+      <label for="email">Email</label>
+      <input id="email" name="email" type="email" placeholder="you@example.com" required>
+      <label for="password">Password</label>
+      <input id="password" name="password" type="password" placeholder="••••••••" required>
+      <span class="form-error" id="form-error"></span>
+      <button type="submit" class="btn primary wide">Log in</button>
+    </form>
+    <p class="auth-switch">No account yet? <a href="register.html">Register</a></p>
+  </main>
+  <script src="auth-demo.js"></script>
+</body>
+</html>

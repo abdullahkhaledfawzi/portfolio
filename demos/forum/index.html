@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Forum — talk about anything (demo)</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a href="#" class="logo" id="logo-link">💬 <span>Forum</span></a>
+
+    <nav class="filters" id="filters">
+      <button class="filter-btn active" data-filter="all">All posts</button>
+      <select id="category-filter" class="filter-select" title="Filter by category">
+        <option value="">Categories…</option>
+      </select>
+      <button class="filter-btn" data-filter="mine" data-auth="1">My posts</button>
+      <button class="filter-btn" data-filter="liked" data-auth="1">Liked posts</button>
+    </nav>
+
+    <div class="auth-area" id="auth-area"></div>
+  </header>
+
+  <main class="container">
+    <!-- demo note -->
+    <section class="card demo-note-card" id="demo-note" style="margin-bottom:18px; font-size:.85rem; color:var(--text-dim);">
+      💡 <b style="color:var(--text);">Interactive demo.</b> This is a faithful simulation of the Node.js forum
+      running fully client-side: register/log in (any email + password), post, comment, vote and filter —
+      same UI, same flows as the real app. <a href="login.html">Open the login page →</a>
+    </section>
+
+    <!-- New post composer (registered users only) -->
+    <section class="card composer hidden" id="composer">
+      <h2>✍️ Create a post</h2>
+      <form id="post-form">
+        <input id="post-title" type="text" placeholder="Post title" maxlength="200" autocomplete="off">
+        <textarea id="post-content" rows="4" placeholder="What do you want to talk about?" maxlength="10000"></textarea>
+        <div class="category-boxes" id="category-checkboxes"></div>
+        <div class="composer-actions">
+          <span class="form-error" id="post-error"></span>
+          <button type="submit" class="btn primary">Publish</button>
+        </div>
+      </form>
+    </section>
+
+    <!-- Hint shown to guests instead of the composer -->
+    <section class="card guest-hint" id="guest-hint">
+      👋 Welcome! You can read every post and comment.
+      <a href="login.html">Log in</a> or <a href="register.html">register</a>
+      to create posts, comment and vote.
+    </section>
+
+    <div id="posts"></div>
+  </main>
+
+  <footer class="footer">Built with plain Node.js, HTML, CSS &amp; SQLite — zero frameworks. Demo data is local; server, WebSocket &amp; SQLite are disabled here.</footer>
+  <script src="demo.js"></script>
+</body>
+</html>

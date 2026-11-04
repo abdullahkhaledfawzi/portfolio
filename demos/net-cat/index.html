@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>net-cat — TCP Chat Server Simulation</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="term-window">
+    <div class="term-bar">
+      <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+      <span class="term-title">bash — abdullah@linux: ~/ncat</span>
+    </div>
+    <div class="term-body" id="term" aria-live="polite"></div>
+    <div class="term-inputbar">
+      <span class="prompt-static">➜</span>
+      <span id="typed" class="typed"></span><span class="caret"></span>
+    </div>
+  </div>
+
+  <div class="replay-controls">
+    <button id="btn-replay">⟲ Replay simulation</button>
+    <select id="speed-select" title="Speed">
+      <option value="1">speed 1x</option>
+      <option value="2" selected>speed 2x</option>
+      <option value="4">speed 4x</option>
+    </select>
+  </div>
+
+  <script src="sim.js"></script>
+</body>
+</html>

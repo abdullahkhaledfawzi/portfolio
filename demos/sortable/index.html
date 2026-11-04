@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Superhero Database</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Superhero Database</h1>
+    <p class="title-subtitle">563 heroes from the Superhero API</p>
+    
+    <div class="controls">
+      <input type="text" class="search-input" id="searchInput" placeholder="Search by name...">
+      <select class="page-size" id="pageSize">
+        <option value="10">10 per page</option>
+        <option value="20" selected>20 per page</option>
+        <option value="50">50 per page</option>
+        <option value="100">100 per page</option>
+        <option value="all">All results</option>
+      </select>
+    </div>
+
+    <div class="table-wrap">
+      <table id="heroTable">
+        <thead>
+          <tr>
+            <th data-col="icon">Icon</th>
+            <th data-col="name">Name</th>
+            <th data-col="fullName">Full Name</th>
+            <th data-col="intelligence">Intelligence</th>
+            <th data-col="strength">Strength</th>
+            <th data-col="speed">Speed</th>
+            <th data-col="durability">Durability</th>
+            <th data-col="power">Power</th>
+            <th data-col="combat">Combat</th>
+            <th data-col="race">Race</th>
+            <th data-col="gender">Gender</th>
+            <th data-col="height">Height (cm)</th>
+            <th data-col="weight">Weight (kg)</th>
+            <th data-col="placeOfBirth">Place of Birth</th>
+            <th data-col="alignment">Alignment</th>
+          </tr>
+        </thead>
+        <tbody id="tableBody"></tbody>
+      </table>
+    </div>
+
+    <div class="pagination" id="pagination"></div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
